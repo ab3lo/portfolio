@@ -1,17 +1,62 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
+  modules: [
+    '@vueuse/nuxt',
+    '@nuxt/ui',
+    '@nuxt/image',
+    'vue-sonner/nuxt',
+  ],
+
+  imports: {
+    presets: [
+      {
+        from: 'vue-sonner',
+        imports: ['toast'],
+      },
+    ],
   },
-  modules: ['@nuxt/devtools'],
+
+  devtools: {
+    enabled: true,
+  },
+
+  css: ['~/assets/style/main.css'],
+
+  app: {
+    baseURL: '/portfolio/',
+  },
+
   nitro: {
     preset: 'github-pages',
   },
-  app: {
-    baseURL: '/portfolio/',
+
+  colorMode: {
+    preference: 'dark',
+    fallback: 'dark',
+  },
+
+  runtimeConfig: {
+    public: {
+      resend: false,
+    },
+  },
+
+  compatibilityDate: '2025-01-05',
+
+  icon: {
+    customCollections: [
+      {
+        prefix: 'custom',
+        dir: './app/assets/icons',
+      },
+    ],
+    clientBundle: {
+      scan: true,
+      includeCustomCollections: true,
+    },
+    provider: 'iconify',
+  },
+
+  ogImage: {
+    zeroRuntime: true,
   },
 })
