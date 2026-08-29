@@ -4,6 +4,7 @@ const projects = [
   { title: 'Project Two', desc: 'A description of project two', tags: ['React', 'Next.js', 'TypeScript'], href: '#' },
   { title: 'Project Three', desc: 'A description of project three', tags: ['Vue', 'Pinia', 'Vite'], href: '#' },
 ]
+const name = "ab3l0"
 </script>
 
 <template>
@@ -11,7 +12,7 @@ const projects = [
     <div class="space-y-8">
       <div>
         <h1 class="text-6xl md:text-8xl font-medium tracking-tight leading-none">
-          Hi, I'm <span class="text-neutral-400">Your Name</span>
+          Hi, I'm <span class="text-neutral-400">{{name}}</span>
         </h1>
         <p class="mt-6 text-lg md:text-xl text-neutral-400 max-w-2xl">
           I build things for the web. Currently focused on Vue, Nuxt, and modern frontend architecture.
