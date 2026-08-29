@@ -4,9 +4,9 @@ export default defineAppConfig({
     available: true,
   },
   profile: {
-    name: 'Hugo Richard',
-    job: 'Frontend Architect and Designer',
-    email: 'contact@hrcd.fr',
+    name: 'Abel Magswitch',
+    job: 'Software Engineer and Pentester',
+    email: '1234@protonmail.com',
     phone: '(+33) 6 21 56 22 18',
     picture: 'https://avatars.githubusercontent.com/u/71938701?v=4',
   },
@@ -18,7 +18,7 @@ export default defineAppConfig({
     spotify: 'https://open.spotify.com/user/yuvl0zpp3bpx4hne1ag7huten?si=df7ee2777c0c4fc4',
   },
   seo: {
-    title: 'Canvas a Nuxt portfolio template',
+    title: 'Ab3lo: Junior Software Engineer " Riggsware.Inc',
     description: 'Canvas is a simple but beautiful portfolio template for designers and developers built with Nuxt and Tailwind CSS. Made with ❤️ by HugoRCD',
     url: 'https://canvas.hrcd.fr',
   },
