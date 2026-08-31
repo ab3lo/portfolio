@@ -35,7 +35,6 @@ export const stack: StackItem[] = [
   { name: 'Coolify', link: 'https://coolify.io/', icon: 'custom:coolify' },
   { name: 'Excalidraw', link: 'https://excalidraw.com/', icon: 'custom:excalidraw' },
   { name: 'OpenCode', link: 'https://opencode.ai/', icon: 'custom:opencode' },
-  { name: 'Hermes Agent', link: 'https://github.com/NeutriumJack/hermes', icon: 'custom:hermes' },
   { name: 'Svelte', link: 'https://svelte.dev/', icon: 'custom:svelte' },
   { name: 'Laravel', link: 'https://laravel.com/', icon: 'custom:laravel' },
   { name: 'Motion', link: 'https://motion.dev/', icon: 'custom:motion' },
