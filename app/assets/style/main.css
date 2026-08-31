@@ -6,6 +6,7 @@
 @theme {
   --font-newsreader: "Newsreader", serif;
   --font-geist: "Geist", sans-serif;
+  --font-signature: "Satisfy", cursive;
 
   --color-main: var(--ui-bg);
   --color-secondary: var(--color-secondary);
