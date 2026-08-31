@@ -32,11 +32,11 @@ export const projects: Project[] = [
     description: "Personnal roadmap and resume.",
   },
   {
-    name: "Maison Hochard",
+    name: "Laptopvalley",
     image: "/projects/maison-hochard.webp",
-    link: "https://maisonhochard.fr/",
+    link: "",
     release: "2023",
-    description: "Landing page for a French design studio.",
+    description: "Online Latop vendor store,Built with Coolify and wordpress",
   },
   {
     name: "Mockline",
@@ -87,6 +87,7 @@ export const stack: StackItem[] = [
   { name: "Better Auth", link: "https://better-auth.com/", icon: "custom:betterauth" },
   { name: "Git/GitHub", link: "https://github.com/", icon: "custom:github" },
   { name: "Cloudflare", link: "https://www.cloudflare.com/", icon: "custom:cloudflare" },
+  { name: "Shadcn/ui", link: "https://www.shadcn.ui", icon: "custom:shadcn/ui" },
 ];
 
 export interface FaqGroup {
