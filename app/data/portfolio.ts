@@ -1,80 +1,162 @@
 export interface Project {
-  name: string
-  image: string
-  link: string
-  release: string
-  featured?: boolean
-  description?: string
+  name: string;
+  image: string;
+  link: string;
+  release: string;
+  featured?: boolean;
+  description?: string;
 }
 
 export const projects: Project[] = [
-  { name: 'Canvas', image: '/projects/canvas.webp', link: 'https://canvas.hrcd.fr/', release: '2024', featured: true, description: 'Portfolio template built with Nuxt and Tailwind.' },
-  { name: 'Helpr', image: '/projects/helpr.webp', link: 'https://helpr.site/', release: '2024', featured: true, description: 'SaaS designed to help developpers ship their products.' },
-  { name: 'HR Folio', image: '/projects/hr-folio.webp', link: 'https://hr-folio.hrcd.fr/', release: '2024', description: 'Personnal roadmap and resume.' },
-  { name: 'Maison Hochard', image: '/projects/maison-hochard.webp', link: 'https://maisonhochard.fr/', release: '2023', description: 'Landing page for a French design studio.' },
-  { name: 'Mockline', image: '/projects/mockline.webp', link: 'https://mockline.dev/', release: '2023', description: 'Design env written in Go to encrypt your backup.' },
-  { name: 'NuxtLog', image: '/projects/nuxtlog.webp', link: 'https://nuxtlog.com/', release: '2023', description: 'Personal blogging platform and analytics.' },
-  { name: 'Shelve', image: '/projects/shelve.webp', link: 'https://shelve.cloud/', release: '2022', description: 'The first open-source cloud storage manager.' },
-]
+  {
+    name: "Canvas",
+    image: "/projects/canvas.webp",
+    link: "https://canvas.hrcd.fr/",
+    release: "2024",
+    featured: true,
+    description: "Portfolio template built with Nuxt and Tailwind.",
+  },
+  {
+    name: "Helpr",
+    image: "/projects/helpr.webp",
+    link: "https://helpr.site/",
+    release: "2024",
+    featured: true,
+    description: "SaaS designed to help developpers ship their products.",
+  },
+  {
+    name: "HR Folio",
+    image: "/projects/hr-folio.webp",
+    link: "https://hr-folio.hrcd.fr/",
+    release: "2024",
+    description: "Personnal roadmap and resume.",
+  },
+  {
+    name: "Maison Hochard",
+    image: "/projects/maison-hochard.webp",
+    link: "https://maisonhochard.fr/",
+    release: "2023",
+    description: "Landing page for a French design studio.",
+  },
+  {
+    name: "Mockline",
+    image: "/projects/mockline.webp",
+    link: "https://mockline.dev/",
+    release: "2023",
+    description: "Design env written in Go to encrypt your backup.",
+  },
+  {
+    name: "NuxtLog",
+    image: "/projects/nuxtlog.webp",
+    link: "https://nuxtlog.com/",
+    release: "2023",
+    description: "Personal blogging platform and analytics.",
+  },
+  {
+    name: "Shelve",
+    image: "/projects/shelve.webp",
+    link: "https://shelve.cloud/",
+    release: "2022",
+    description: "The first open-source cloud storage manager.",
+  },
+];
 
 export interface StackItem {
-  name: string
-  link: string
-  icon: string
+  name: string;
+  link: string;
+  icon: string;
 }
 
 export const stack: StackItem[] = [
-  { name: 'Nuxt', link: 'https://nuxt.com/', icon: 'custom:nuxt' },
-  { name: 'Vue', link: 'https://vuejs.org/', icon: 'custom:vue' },
-  { name: 'Tailwind', link: 'https://tailwindcss.com/', icon: 'custom:tailwind' },
-  { name: 'PostgreSQL', link: 'https://www.postgresql.org/', icon: 'custom:postgresql' },
-  { name: 'SQLite', link: 'https://www.sqlite.org/', icon: 'custom:sqlite' },
-  { name: 'Python', link: 'https://www.python.org/', icon: 'custom:python' },
-  { name: 'Go', link: 'https://go.dev/', icon: 'custom:go' },
-  { name: 'Docker', link: 'https://www.docker.com/', icon: 'custom:docker' },
-  { name: 'Coolify', link: 'https://coolify.io/', icon: 'custom:coolify' },
-  { name: 'Excalidraw', link: 'https://excalidraw.com/', icon: 'custom:excalidraw' },
-  { name: 'OpenCode', link: 'https://opencode.ai/', icon: 'custom:opencode' },
-  { name: 'Svelte', link: 'https://svelte.dev/', icon: 'custom:svelte' },
-  { name: 'Laravel', link: 'https://laravel.com/', icon: 'custom:laravel' },
-  { name: 'Motion', link: 'https://motion.dev/', icon: 'custom:motion' },
-  { name: 'Bun', link: 'https://bun.sh/', icon: 'custom:bun' },
-  { name: 'Better Auth', link: 'https://better-auth.com/', icon: 'custom:betterauth' },
-  { name: 'MariaDB', link: 'https://mariadb.org/', icon: 'custom:mariadb' },
-  { name: 'Git/GitHub', link: 'https://github.com/', icon: 'custom:github' },
-  { name: 'Cloudflare', link: 'https://www.cloudflare.com/', icon: 'custom:cloudflare' },
-]
+  { name: "Nuxt", link: "https://nuxt.com/", icon: "custom:nuxt" },
+  { name: "Vue", link: "https://vuejs.org/", icon: "custom:vue" },
+  { name: "Tailwind", link: "https://tailwindcss.com/", icon: "custom:tailwind" },
+  { name: "PostgreSQL", link: "https://www.postgresql.org/", icon: "custom:postgresql" },
+  { name: "SQLite", link: "https://www.sqlite.org/", icon: "custom:sqlite" },
+  { name: "Python", link: "https://www.python.org/", icon: "custom:python" },
+  { name: "Go", link: "https://go.dev/", icon: "custom:go" },
+  { name: "Docker", link: "https://www.docker.com/", icon: "custom:docker" },
+  { name: "Coolify", link: "https://coolify.io/", icon: "custom:coolify" },
+  { name: "Excalidraw", link: "https://excalidraw.com/", icon: "custom:excalidraw" },
+  { name: "OpenCode", link: "https://opencode.ai/", icon: "custom:opencode" },
+  { name: "Svelte", link: "https://svelte.dev/", icon: "custom:svelte" },
+  { name: "Laravel", link: "https://laravel.com/", icon: "custom:laravel" },
+  { name: "Motion", link: "https://motion.dev/", icon: "custom:motion" },
+  { name: "Bun", link: "https://bun.sh/", icon: "custom:bun" },
+  { name: "Better Auth", link: "https://better-auth.com/", icon: "custom:betterauth" },
+  { name: "MariaDB", link: "https://mariadb.org/", icon: "custom:mariadb" },
+  { name: "Git/GitHub", link: "https://github.com/", icon: "custom:github" },
+  { name: "Cloudflare", link: "https://www.cloudflare.com/", icon: "custom:cloudflare" },
+];
 
 export interface FaqGroup {
-  title: string
-  questions: { label: string; content: string }[]
+  title: string;
+  questions: { label: string; content: string }[];
 }
 
 export const faq: FaqGroup[] = [
   {
-    title: 'Services',
+    title: "Services",
     questions: [
-      { label: 'What services do you offer?', content: 'I offer a range of services including web design, web development, branding, and photography. I can also help with SEO and social media marketing.' },
-      { label: 'Can you teach me how to make a website?', content: "I don't offer courses at the moment, but I can recommend resources and advice to help you get the most out of your learning." },
+      {
+        label: "What services do you offer?",
+        content:
+          "I offer a range of services including web design, web development, site-auditing, and pentesting. I can also help with SEO and Video Editing.",
+      },
+      {
+        label: "Do you use Ai?",
+        content:
+          "Yes, I believe despite the security nightmares incorporating Ai generated code brings about ,it can be benefical and productive when used with the right tools,context and constraints.",
+      },
     ],
   },
   {
-    title: 'Process',
+    title: "Process",
     questions: [
-      { label: 'How long does a project take?', content: "It's difficult to give an exact estimate, as each project is different, but the majority of my past work has taken between 2 weeks and 2 months." },
-      { label: 'How do we get started?', content: 'Reach out via the contact form and we can set up a short call to discuss your project and goals.' },
+      {
+        label: "How long does a project take?",
+        content:
+          "It's difficult to give an exact estimate, as each project is different, but the majority of my past work has taken between 2 weeks and 2 months.",
+      },
+      {
+        label: "How do we get started?",
+        content:
+          "You can reach out me via the slack,fiverr or upwork to discuss your project and goals.",
+      },
     ],
   },
-]
+];
 
 export interface Experience {
-  role: string
-  company: string
-  period: string
-  description: string
+  role: string;
+  company: string;
+  period: string;
+  description: string;
 }
 
-export const experiences: Experience[] = [
-  { role: 'Founder', company: 'Nuxt Studio', period: '2023 — 2024', description: 'Building the official content management system for Nuxt.' },
-  { role: 'Frontend Architect', company: 'Freelance', period: '2021 — Present', description: 'Designing and shipping of web apps and design systems.' },
-]
+export const experiences: History[] = [
+  {
+    role: "Software Engineer",
+    company: "Riggsware",
+    period: "May 2026 — Present",
+    description: "Building and Managing performant,high-volume Ecommerce Sites for Clients.",
+  },
+  {
+    role: "Web-Development Certification",
+    company: "Corvit Systems",
+    period: "Feb — May 2026",
+    description: "Completed an Extensive 3 month Full-Stack Web-Dev certification",
+  },
+  {
+    role: "Bachelors in Software Eng.",
+    company: "Islamia University of Bahwalpur",
+    period: "Sep 2024 - Ongoing",
+    description: "4th Semester Undergrad .",
+  },
+  {
+    role: "Video Editor",
+    company: "Freelance",
+    period: "Apr 2022 — Jun 2024",
+    description: "Editing Short-Form Entertainment content",
+  },
+];
