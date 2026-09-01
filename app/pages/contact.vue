@@ -13,6 +13,28 @@ const botcheck = ref(false);
 
 const loading = ref(false);
 
+function validate(state: typeof state) {
+  const errors: { name: string; message: string }[] = [];
+
+  if (!state.fullname.trim()) {
+    errors.push({ name: "fullname", message: "Please enter your name." });
+  }
+
+  if (!state.email.trim()) {
+    errors.push({ name: "email", message: "Please enter your email address." });
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(state.email.trim())) {
+    errors.push({ name: "email", message: "Please enter a valid email address." });
+  }
+
+  if (!state.message.trim()) {
+    errors.push({ name: "message", message: "Please enter a message." });
+  } else if (state.message.trim().length < 10) {
+    errors.push({ name: "message", message: "Your message must be at least 10 characters." });
+  }
+
+  return errors;
+}
+
 async function onSubmit() {
   if (botcheck.value) {
     toast.error("Something went wrong. Please email me directly.");
@@ -21,19 +43,27 @@ async function onSubmit() {
 
   loading.value = true;
   try {
-    const res = await $fetch(contact.web3formsEndpoint, {
+    const body = {
+      access_key: contact.web3formsAccessKey,
+      name: state.fullname,
+      email: state.email,
+      subject: state.subject,
+      message: state.message,
+    };
+
+    const res = await fetch(contact.web3formsEndpoint, {
       method: "POST",
-      body: {
-        access_key: contact.web3formsAccessKey,
-        name: state.fullname,
-        email: "unemploidtee@protonmail.com",
-        subject: state.subject,
-        message: state.message,
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
       },
+      body: JSON.stringify(body),
     });
 
-    if (res?.success === false) {
-      throw new Error(res.message || "Web3Forms submission failed");
+    const json = await res.json();
+
+    if (!res.ok || json.success === false) {
+      throw new Error(json.message || "Web3Forms submission failed");
     }
 
     state.value = {
@@ -68,7 +98,7 @@ async function onSubmit() {
       </a>
     </p>
 
-    <UForm :state class="mx-auto flex w-full max-w-[40rem] flex-col gap-3 pt-6" @submit="onSubmit">
+    <UForm :state :validate="validate" class="mx-auto flex w-full max-w-[40rem] flex-col gap-3 pt-6" @submit="onSubmit">
       <input
         v-model="botcheck"
         type="checkbox"
@@ -80,7 +110,7 @@ async function onSubmit() {
       />
 
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
-        <UFormField label="Fullname">
+        <UFormField name="fullname" label="Fullname">
           <UInput
             v-model="state.fullname"
             type="text"
@@ -90,7 +120,7 @@ async function onSubmit() {
           />
         </UFormField>
 
-        <UFormField label="Email">
+        <UFormField name="email" label="Email">
           <UInput
             v-model="state.email"
             type="email"
@@ -110,7 +140,7 @@ async function onSubmit() {
         />
       </UFormField>
 
-      <UFormField label="Message">
+      <UFormField name="message" label="Message">
         <UTextarea
           v-model="state.message"
           class="w-full"
