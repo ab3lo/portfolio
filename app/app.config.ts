@@ -24,6 +24,10 @@ export default defineAppConfig({
       "Canvas is a simple but beautiful portfolio template for designers and developers built with Nuxt and Tailwind CSS. Made with ❤️ by HugoRCD",
     url: "https://canvas.hrcd.fr",
   },
+  contact: {
+    web3formsAccessKey: "1aa7e7ae-d2a6-4ff2-9d63-7abe4482ed2b",
+    web3formsEndpoint: "https://api.web3forms.com/submit",
+  },
   ui: {
     colors: {
       primary: "emerald",

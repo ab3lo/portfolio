@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { profile } = useAppConfig()
+const { profile, contact } = useAppConfig()
 
 const state = ref({
   email: '',
@@ -9,11 +9,33 @@ const state = ref({
   subject: '',
 })
 
+const botcheck = ref(false)
+
 const loading = ref(false)
 
-function onSubmit() {
+async function onSubmit() {
+  if (botcheck.value) {
+    toast.error('Something went wrong. Please email me directly.')
+    return
+  }
+
   loading.value = true
-  setTimeout(() => {
+  try {
+    const res = await $fetch(contact.web3formsEndpoint, {
+      method: 'POST',
+      body: {
+        access_key: contact.web3formsAccessKey,
+        name: state.fullname,
+        email: state.email,
+        subject: state.subject,
+        message: state.message,
+      },
+    })
+
+    if (res?.success === false) {
+      throw new Error(res.message || 'Web3Forms submission failed')
+    }
+
     state.value = {
       email: '',
       message: '',
@@ -21,9 +43,13 @@ function onSubmit() {
       fullname: '',
       subject: '',
     }
+    toast.success('Message sent — thanks for reaching out!')
+  } catch (error) {
+    console.error('Failed to submit contact form:', error)
+    toast.error('Something went wrong. Please email me directly at ' + profile.email)
+  } finally {
     loading.value = false
-    toast.success('Message noted — thanks for reaching out!')
-  }, 600)
+  }
 }
 </script>
 
@@ -49,6 +75,16 @@ function onSubmit() {
       class="mx-auto flex w-full max-w-[40rem] flex-col gap-3 pt-6"
       @submit="onSubmit"
     >
+      <input
+        v-model="botcheck"
+        type="checkbox"
+        name="botcheck"
+        class="hidden"
+        tabindex="-1"
+        autocomplete="off"
+        aria-hidden="true"
+      />
+
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
         <UFormField label="Fullname">
           <UInput
