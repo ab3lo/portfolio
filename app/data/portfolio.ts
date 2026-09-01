@@ -112,6 +112,16 @@ export const faq: FaqGroup[] = [
     ],
   },
   {
+    title: "Pricing",
+    questions: [
+      {
+        label: "How much do I charge per project ?",
+        content:
+          "The cost varies depending upon the type of project but the cost from 250$ to 3500$",
+      },
+    ],
+  },
+  {
     title: "Process",
     questions: [
       {
