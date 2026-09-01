@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const socialMediaRegexMap = [
-  { regex: /github\.com/, name: "GitHub", icon: "custom:github" },
-  { regex: /element\.io|matrix\.to/, name: "Element", icon: "custom:element" },
-  { regex: /slack\.com/, name: "Slack", icon: "custom:slack" },
-  { regex: /proton\.me|protonmail\.com/, name: "ProtonMail", icon: "custom:protonmail" },
-  { regex: /upwork\.com/, name: "Upwork", icon: "custom:upwork" },
-  { regex: /fiverr\.com/, name: "Fiverr", icon: "custom:fiverr" },
+  { regex: /github\.com/, name: "GitHub", icon: "simple-icons:github" },
+  { regex: /element\.io|matrix\.to/, name: "Element", icon: "simple-icons:element" },
+  { regex: /slack\.com/, name: "Slack", icon: "simple-icons:slack" },
+  { regex: /proton\.me|protonmail\.com/, name: "ProtonMail", icon: "simple-icons:protonmail" },
+  { regex: /upwork\.com/, name: "Upwork", icon: "simple-icons:upwork" },
+  { regex: /fiverr\.com/, name: "Fiverr", icon: "simple-icons:fiverr" },
 ];
 
 const { socials } = useAppConfig();

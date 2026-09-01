@@ -7,13 +7,9 @@
           to="/contact"
         >
           Let's work together
-          <UIcon
-            name="heroicons-envelope"
-            class="size-5 text-white/80"
-          />
+          <UIcon name="heroicons-envelope" class="size-5 text-white/80" />
         </NuxtLink>
       </SpotlightButton>
-      <MeetingButton />
     </div>
   </div>
 </template>

@@ -87,7 +87,7 @@ export const stack: StackItem[] = [
   { name: "Better Auth", link: "https://better-auth.com/", icon: "custom:betterauth" },
   { name: "Git/GitHub", link: "https://github.com/", icon: "custom:github" },
   { name: "Cloudflare", link: "https://www.cloudflare.com/", icon: "custom:cloudflare" },
-  { name: "Shadcn/ui", link: "https://www.shadcn.ui", icon: "custom:shadcn/ui" },
+  { name: "Shadcn/ui", link: "https://www.shadcn.ui", icon: "simple-icons:shadcnui" },
 ];
 
 export interface FaqGroup {
@@ -149,10 +149,10 @@ export const experiences: History[] = [
     description: "Completed an Extensive 3 month Full-Stack Web-Dev certification",
   },
   {
-    role: "Bachelors in Software Eng.",
-    company: "Islamia University of Bahwalpur",
+    role: "Bachelors",
+    company: "Software Eng.",
     period: "Sep 2024 - Ongoing",
-    description: "4th Semester Undergrad .",
+    description: "",
   },
   {
     role: "Video Editor",
