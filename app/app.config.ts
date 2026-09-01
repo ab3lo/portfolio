@@ -11,11 +11,12 @@ export default defineAppConfig({
     picture: "https://avatars.githubusercontent.com/u/71938701?v=4",
   },
   socials: {
-    github: "https://github.com/HugoRCD",
-    twitter: "https://twitter.com/HugoRCD__",
-    linkedin: "https://www.linkedin.com/in/hugo-richard-0801",
-    instagram: "https://www.instagram.com/hugo.rcd_",
-    spotify: "https://open.spotify.com/user/yuvl0zpp3bpx4hne1ag7huten?si=df7ee2777c0c4fc4",
+    github: "https://github.com/ab3lo",
+    element: "https://matrix.to/#/@ab3lo:matrix.org",
+    slack: "https://ab3lo-workspace.slack.com",
+    protonmail: "https://proton.me/ab3lo",
+    upwork: "https://www.upwork.com/freelancers/ab3lo",
+    fiverr: "https://www.fiverr.com/ab3lo",
   },
   seo: {
     title: 'Ab3lo: Junior Software Engineer "Riggsware.dev',

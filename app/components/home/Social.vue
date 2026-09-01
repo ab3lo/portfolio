@@ -1,19 +1,22 @@
 <script setup lang="ts">
 const socialMediaRegexMap = [
-  { regex: /github\.com/, name: 'GitHub', icon: 'custom:github' },
-  { regex: /twitter\.com/, name: 'X / Twitter', icon: 'custom:x' },
-  { regex: /linkedin\.com/, name: 'LinkedIn', icon: 'custom:linkedin' },
-  { regex: /instagram\.com/, name: 'Instagram', icon: 'custom:instagram' },
-  { regex: /spotify\.com/, name: 'Spotify', icon: 'custom:spotify' },
-]
+  { regex: /github\.com/, name: "GitHub", icon: "custom:github" },
+  { regex: /element\.io|matrix\.to/, name: "Element", icon: "custom:element" },
+  { regex: /slack\.com/, name: "Slack", icon: "custom:slack" },
+  { regex: /proton\.me|protonmail\.com/, name: "ProtonMail", icon: "custom:protonmail" },
+  { regex: /upwork\.com/, name: "Upwork", icon: "custom:upwork" },
+  { regex: /fiverr\.com/, name: "Fiverr", icon: "custom:fiverr" },
+];
 
-const { socials } = useAppConfig()
-const mappedSocials = Object.values(socials).map((link) => {
-  const foundSocial = socialMediaRegexMap.find(social => social.regex.test(link))
-  if (!foundSocial) throw new Error(`No social media found for link: ${link}`)
-  const { name, icon } = foundSocial
-  return { name, link, icon }
-})
+const { socials } = useAppConfig();
+const mappedSocials = Object.values(socials)
+  .map((link) => {
+    const foundSocial = socialMediaRegexMap.find((social) => social.regex.test(link));
+    if (!foundSocial) return null;
+    const { name, icon } = foundSocial;
+    return { name, link, icon };
+  })
+  .filter(Boolean);
 </script>
 
 <template>
