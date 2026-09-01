@@ -12,7 +12,7 @@ export default defineAppConfig({
   },
   socials: {
     github: "https://github.com/ab3lo",
-    element: "https://matrix.to/#/@ab3lo:matrix.org",
+    element: "https://matrix.to/#/@ireallyhatejews:matrix.org",
     slack: "https://ab3lo-workspace.slack.com",
     protonmail: "https://proton.me/ab3lo",
     upwork: "https://www.upwork.com/freelancers/ab3lo",
