@@ -1,63 +1,61 @@
 <script setup lang="ts">
-const { profile, contact } = useAppConfig()
+const { profile, contact } = useAppConfig();
 
 const state = ref({
-  email: '',
-  message: '',
-  phone: '',
-  fullname: '',
-  subject: '',
-})
+  email: "",
+  message: "",
+  phone: "",
+  fullname: "",
+  subject: "",
+});
 
-const botcheck = ref(false)
+const botcheck = ref(false);
 
-const loading = ref(false)
+const loading = ref(false);
 
 async function onSubmit() {
   if (botcheck.value) {
-    toast.error('Something went wrong. Please email me directly.')
-    return
+    toast.error("Something went wrong. Please email me directly.");
+    return;
   }
 
-  loading.value = true
+  loading.value = true;
   try {
     const res = await $fetch(contact.web3formsEndpoint, {
-      method: 'POST',
+      method: "POST",
       body: {
         access_key: contact.web3formsAccessKey,
         name: state.fullname,
-        email: state.email,
+        email: "unemploidtee@protonmail.com",
         subject: state.subject,
         message: state.message,
       },
-    })
+    });
 
     if (res?.success === false) {
-      throw new Error(res.message || 'Web3Forms submission failed')
+      throw new Error(res.message || "Web3Forms submission failed");
     }
 
     state.value = {
-      email: '',
-      message: '',
-      phone: '',
-      fullname: '',
-      subject: '',
-    }
-    toast.success('Message sent — thanks for reaching out!')
+      email: "",
+      message: "",
+      phone: "",
+      fullname: "",
+      subject: "",
+    };
+    toast.success("Message sent — thanks for reaching out!");
   } catch (error) {
-    console.error('Failed to submit contact form:', error)
-    toast.error('Something went wrong. Please email me directly at ' + profile.email)
+    console.error("Failed to submit contact form:", error);
+    toast.error("Something went wrong. Please email me directly at " + profile.email);
   } finally {
-    loading.value = false
+    loading.value = false;
   }
 }
 </script>
 
 <template>
   <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20">
-    <h1 class="font-newsreader italic text-white-shadow text-center text-4xl">
-      Contact
-    </h1>
+    <h1 class="font-newsreader italic text-white-shadow text-center text-4xl">Contact</h1>
     <h2 class="text-center text-lg font-extralight italic text-muted">
       Let's talk about your ideas, projects or anything else
     </h2>
@@ -70,11 +68,7 @@ async function onSubmit() {
       </a>
     </p>
 
-    <UForm
-      :state
-      class="mx-auto flex w-full max-w-[40rem] flex-col gap-3 pt-6"
-      @submit="onSubmit"
-    >
+    <UForm :state class="mx-auto flex w-full max-w-[40rem] flex-col gap-3 pt-6" @submit="onSubmit">
       <input
         v-model="botcheck"
         type="checkbox"
@@ -125,15 +119,7 @@ async function onSubmit() {
         />
       </UFormField>
 
-      <UButton
-        type="submit"
-        block
-        :loading
-        size="lg"
-        class="mt-2"
-      >
-        Send message
-      </UButton>
+      <UButton type="submit" block :loading size="lg" class="mt-2"> Send message </UButton>
     </UForm>
   </section>
 </template>
