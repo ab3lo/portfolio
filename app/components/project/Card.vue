@@ -8,6 +8,8 @@ defineProps<{
 const emit = defineEmits<{
   'open-modal': [project: Project]
 }>()
+
+const { resolveAsset } = useBaseUrl()
 </script>
 
 <template>
@@ -34,7 +36,7 @@ const emit = defineEmits<{
     </div>
     <div class="flex h-56 justify-center overflow-hidden rounded-lg">
       <img
-        :src="project.image"
+        :src="resolveAsset(project.image)"
         :alt="project.name + ' project image'"
         width="1536"
         height="864"
