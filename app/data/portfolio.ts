@@ -68,14 +68,16 @@ export interface StackItem {
 }
 
 export const stack: StackItem[] = [
+  { name: "Next" , link: "https://next.org", icon:"custom:nextjs"}
   { name: "Nuxt", link: "https://nuxt.com/", icon: "custom:nuxt" },
   { name: "Vue", link: "https://vuejs.org/", icon: "custom:vue" },
   { name: "Svelte", link: "https://svelte.dev/", icon: "custom:svelte" },
   { name: "Tailwind", link: "https://tailwindcss.com/", icon: "custom:tailwind" },
+  { name: "React", link: "https://www.react.dev/", icon: "custom:react" },
   { name: "PostgreSQL", link: "https://www.postgresql.org/", icon: "custom:postgresql" },
-  { name: "SQLite", link: "https://www.sqlite.org/", icon: "custom:sqlite" },
   { name: "Python", link: "https://www.python.org/", icon: "custom:python" },
   { name: "Docker", link: "https://www.docker.com/", icon: "custom:docker" },
+  { name: "Kotlin", link: "https://www.kotlinlang.org", icon:"custom:kotlin"}
   { name: "Coolify", link: "https://coolify.io/", icon: "custom:coolify" },
   { name: "Go", link: "https://go.dev/", icon: "custom:go" },
   { name: "Excalidraw", link: "https://excalidraw.com/", icon: "custom:excalidraw" },
