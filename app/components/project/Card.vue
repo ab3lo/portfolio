@@ -1,37 +1,55 @@
 <script setup lang="ts">
+import type { Project } from '~/data/portfolio'
+
 defineProps<{
-  project: {
-    name: string
-    release: string
-    image: string
-    link: string
-  }
+  project: Project
 }>()
+
+const emit = defineEmits<{
+  'open-modal': [project: Project]
+}>()
+
 const img = useImage()
 </script>
 
 <template>
-  <NuxtLink
-    :aria-label="project.name + ' project link'"
-    :to="project.link"
-    target="_blank"
+  <div
     class="group relative flex cursor-pointer flex-col gap-1 rounded-lg border border-white/10 bg-zinc-900/80 p-1 shadow-2xl shadow-zinc-950/50 backdrop-blur-sm"
+    @click="emit('open-modal', project)"
   >
     <div class="flex gap-1 px-1 py-[2px]">
-      <div class="size-2 rounded-full bg-red-500/90 transition-all duration-300 group-hover:bg-red-500/90 sm:bg-white/10" />
-      <div class="size-2 rounded-full bg-yellow-500/90 transition-all duration-300 group-hover:bg-yellow-500/90 sm:bg-white/10" />
-      <div class="size-2 rounded-full bg-green-500/90 transition-all duration-300 group-hover:bg-green-500/90 sm:bg-white/10" />
+      <button
+        class="size-2 cursor-pointer rounded-full bg-red-500/90 transition-all duration-300 hover:brightness-110 sm:bg-white/10 sm:hover:bg-red-500/90"
+        aria-label="Close project"
+        @click.stop="emit('open-modal', project)"
+      />
+      <button
+        class="size-2 cursor-pointer rounded-full bg-yellow-500/90 transition-all duration-300 hover:brightness-110 sm:bg-white/10 sm:hover:bg-yellow-500/90"
+        aria-label="Expand project preview"
+        @click.stop="emit('open-modal', project)"
+      />
+      <button
+        class="size-2 cursor-pointer rounded-full bg-green-500/90 transition-all duration-300 hover:brightness-110 sm:bg-white/10 sm:hover:bg-green-500/90"
+        aria-label="Minimize project"
+        @click.stop="emit('open-modal', project)"
+      />
     </div>
     <div class="flex h-56 justify-center overflow-hidden rounded-lg">
       <NuxtImg
         :placeholder="img(`${project.image}`)"
         width="1536"
         :alt="project.name + ' project image'"
-        class="h-full rounded-lg object-cover transition-all duration-300 hover:scale-105"
+        class="h-full rounded-lg object-cover transition-all duration-300 group-hover:scale-105"
         :src="project.image"
       />
     </div>
-    <div class="absolute bottom-0 flex w-full justify-center">
+    <NuxtLink
+      :to="project.link"
+      target="_blank"
+      :aria-label="'Visit ' + project.name"
+      class="absolute bottom-0 flex w-full justify-center rounded-b-lg"
+      @click.stop
+    >
       <div class="rounded-t-lg border-x border-t border-white/10 border-b-transparent px-4 py-[5px] shadow-md backdrop-blur-md sm:w-2/3">
         <div class="flex items-center justify-between gap-2">
           <div class="flex items-center gap-2">
@@ -52,6 +70,6 @@ const img = useImage()
           </div>
         </div>
       </div>
-    </div>
-  </NuxtLink>
+    </NuxtLink>
+  </div>
 </template>

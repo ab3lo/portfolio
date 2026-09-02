@@ -1,5 +1,17 @@
 <script setup lang="ts">
-import { projects } from '~/data/portfolio'
+import { projects, type Project } from '~/data/portfolio'
+
+const modalProject = ref<Project | null>(null)
+const modalOpen = ref(false)
+
+function openModal(project: Project) {
+  modalProject.value = project
+  modalOpen.value = true
+}
+
+function closeModal() {
+  modalOpen.value = false
+}
 </script>
 
 <template>
@@ -16,7 +28,14 @@ import { projects } from '~/data/portfolio'
         v-for="project in projects"
         :key="project.name"
         :project
+        @open-modal="openModal"
       />
     </div>
   </section>
+
+  <ProjectModal
+    :project="modalProject"
+    :open="modalOpen"
+    @close="closeModal"
+  />
 </template>
