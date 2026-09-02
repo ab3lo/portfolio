@@ -14,7 +14,7 @@ export default defineAppConfig({
     github: "https://github.com/ab3lo",
     element: "https://matrix.to/#/@ireallyhatejews:matrix.org",
     slack: "https://chat-with-abel.slack.com",
-    protonmail: "https//:drneutrium@protonmail.com",
+    protonmail: "https://drneutrium@protonmail.com",
     upwork: "https://www.upwork.com/freelancers/abelm19",
   },
   seo: {
