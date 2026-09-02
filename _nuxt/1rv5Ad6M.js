@@ -1,1 +1,0 @@
-import{Lr as e,Un as t}from"./zJP8pFbR.js";var n=(e,t)=>{let n=e.__vccOpts||e;for(let[e,r]of t)n[e]=r;return n},r={},i={class:`linebreak`};function a(n,r){return e(),t(`div`,i)}var o=Object.assign(n(r,[[`render`,a]]),{__name:`Divider`});export{n,o as t};
