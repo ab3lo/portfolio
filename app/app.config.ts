@@ -8,7 +8,7 @@ export default defineAppConfig({
     job: "Software Engineer and Pentester",
     email: "1234@protonmail.com",
     phone: "(+33)90 1231000",
-    picture: "https://avatars.githubusercontent.com/u/71938701?v=4",
+    picture: "https://avatars.githubusercontent.com/u/157012769?v=4",
   },
   socials: {
     github: "https://github.com/ab3lo",
@@ -18,7 +18,7 @@ export default defineAppConfig({
     upwork: "https://www.upwork.com/freelancers/abelm19",
   },
   seo: {
-    title: 'Ab3lo — Software Engineer and Pentester',
+    title: "Ab3lo — Software Engineer and Pentester",
     description:
       "Portfolio of Abel Magswitch, a software engineer and pentester building fast, modern full-stack web experiences with Nuxt and Vue.",
     url: "https://ab3lo.github.io/portfolio",
