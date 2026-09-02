@@ -15,8 +15,7 @@ export default defineAppConfig({
     element: "https://matrix.to/#/@ireallyhatejews:matrix.org",
     slack: "https://ab3lo-workspace.slack.com",
     protonmail: "https://proton.me/ab3lo",
-    upwork: "https://www.upwork.com/freelancers/ab3lo",
-    fiverr: "https://www.fiverr.com/ab3lo",
+    upwork: "https://www.upwork.com/freelancers/abelm19",
   },
   seo: {
     title: 'Ab3lo: Junior Software Engineer "Riggsware.dev',
