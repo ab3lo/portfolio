@@ -13,8 +13,8 @@ export default defineAppConfig({
   socials: {
     github: "https://github.com/ab3lo",
     element: "https://matrix.to/#/@ireallyhatejews:matrix.org",
-    slack: "https://ab3lo-workspace.slack.com",
-    protonmail: "https://proton.me/ab3lo",
+    slack: "https://chat-with-abel.slack.com",
+    protonmail: "mailto:slothandmisery@tutamail.com",
     upwork: "https://www.upwork.com/freelancers/abelm19",
   },
   seo: {
