@@ -34,17 +34,17 @@ const { profile } = useAppConfig();
 
     <div class="flex flex-col gap-6">
       <h3 class="text-white-shadow font-newsreader italic text-3xl">Experience</h3>
-      <ul class="flex flex-col gap-4">
+      <ul class="flex flex-col gap-5">
         <li
           v-for="exp in experiences"
           :key="exp.role + exp.company"
-          class="flex flex-col gap-1 border-l border-white/10 pl-4"
+          class="flex flex-col gap-1 border-l border-white/10 pl-4 sm:pl-5"
         >
           <span class="font-medium text-white/90"> {{ exp.role }} — {{ exp.company }} </span>
           <span class="text-sm text-muted">
             {{ exp.period }}
           </span>
-          <p class="text-sm text-[var(--ui-text-toned)]">
+          <p v-if="exp.description" class="max-w-prose text-sm text-[var(--ui-text-toned)]">
             {{ exp.description }}
           </p>
         </li>
@@ -58,17 +58,17 @@ const { profile } = useAppConfig();
         <h3 class="text-white-shadow font-newsreader italic text-3xl">Tech Stack</h3>
         <p>Tools and technologies I enjoy working with.</p>
       </div>
-      <div class="flex flex-wrap gap-4">
-        <SpotlightCard v-for="item in stack" :key="item.name" white>
+      <div class="grid grid-cols-3 gap-3 sm:grid-cols-4 sm:gap-4 lg:grid-cols-5">
+        <SpotlightCard v-for="item in stack" :key="item.name" white class="w-full">
           <NuxtLink
             :to="item.link"
             target="_blank"
             :aria-label="item.name + ' link'"
-            class="flex gap-2 p-6"
+            class="flex w-full items-center justify-center gap-2 p-4 sm:p-6"
           >
             <UIcon
               :name="item.icon"
-              class="size-9"
+              class="size-7 sm:size-9"
               :font-controlled="false"
               :alt="item.name + ' logo'"
             />
