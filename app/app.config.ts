@@ -18,10 +18,10 @@ export default defineAppConfig({
     upwork: "https://www.upwork.com/freelancers/abelm19",
   },
   seo: {
-    title: 'Ab3lo: Junior Software Engineer "Riggsware.dev',
+    title: 'Ab3lo — Software Engineer and Pentester',
     description:
-      "Canvas is a simple but beautiful portfolio template for designers and developers built with Nuxt and Tailwind CSS. Made with ❤️ by HugoRCD",
-    url: "https://canvas.hrcd.fr",
+      "Portfolio of Abel Magswitch, a software engineer and pentester building fast, modern full-stack web experiences with Nuxt and Vue.",
+    url: "https://ab3lo.github.io/portfolio",
   },
   contact: {
     web3formsAccessKey: "1aa7e7ae-d2a6-4ff2-9d63-7abe4482ed2b",

@@ -55,7 +55,7 @@ async function onSubmit() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Accept": "application/json",
+        Accept: "application/json",
       },
       body: JSON.stringify(body),
     });
@@ -76,7 +76,7 @@ async function onSubmit() {
     toast.success("Message sent — thanks for reaching out!");
   } catch (error) {
     console.error("Failed to submit contact form:", error);
-    toast.error("Something went wrong. Please email me directly at " + profile.email);
+    toast.error("Something went wrong. Please email me directly ");
   } finally {
     loading.value = false;
   }
@@ -98,7 +98,12 @@ async function onSubmit() {
       </a>
     </p>
 
-    <UForm :state :validate="validate" class="mx-auto flex w-full max-w-[40rem] flex-col gap-3 pt-6" @submit="onSubmit">
+    <UForm
+      :state
+      :validate="validate"
+      class="mx-auto flex w-full max-w-[40rem] flex-col gap-3 pt-6"
+      @submit="onSubmit"
+    >
       <input
         v-model="botcheck"
         type="checkbox"

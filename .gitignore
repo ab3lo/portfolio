@@ -22,6 +22,9 @@ logs
 .vercel
 .data
 
+# Personal drafts (not for the repo)
+upwork-bio.md
+
 rt_base
 
 .history

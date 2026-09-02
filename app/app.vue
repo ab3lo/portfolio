@@ -1,5 +1,18 @@
 <script setup lang="ts">
 import { Toaster } from 'vue-sonner'
+
+const config = useAppConfig()
+
+useSeoMeta({
+  title: () => config.seo.title,
+  description: () => config.seo.description,
+  ogTitle: () => config.seo.title,
+  ogDescription: () => config.seo.description,
+  ogImage: () => `${config.seo.url}/og.webp`,
+  ogType: 'website',
+  ogUrl: () => config.seo.url,
+  twitterCard: 'summary_large_image',
+})
 </script>
 
 <template>
