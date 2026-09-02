@@ -74,6 +74,8 @@ export const stack: StackItem[] = [
   { name: "Svelte", link: "https://svelte.dev/", icon: "custom:svelte" },
   { name: "Tailwind", link: "https://tailwindcss.com/", icon: "custom:tailwind" },
   { name: "React", link: "https://www.react.dev/", icon: "custom:react" },
+  { name: "Wordpress", link: "https://www.wordpress.com/", icon: "custom:wordpress" },
+  { name: "Woocommerce", link: "https://www.Woocommerce.com/", icon: "custom:woocommerce" },
   { name: "PostgreSQL", link: "https://www.postgresql.org/", icon: "custom:postgresql" },
   { name: "Python", link: "https://www.python.org/", icon: "custom:python" },
   { name: "Docker", link: "https://www.docker.com/", icon: "custom:docker" },
