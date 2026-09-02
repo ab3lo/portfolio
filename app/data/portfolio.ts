@@ -68,8 +68,8 @@ export interface StackItem {
 }
 
 export const stack: StackItem[] = [
-  { name: "Next" , link: "https://next.org", icon:"custom:nextjs"},
   { name: "Nuxt", link: "https://nuxt.com/", icon: "custom:nuxt" },
+  { name: "Next", link: "https://next.org", icon:"custom:nextjs"},
   { name: "Vue", link: "https://vuejs.org/", icon: "custom:vue" },
   { name: "Svelte", link: "https://svelte.dev/", icon: "custom:svelte" },
   { name: "Tailwind", link: "https://tailwindcss.com/", icon: "custom:tailwind" },
