@@ -8,8 +8,6 @@ defineProps<{
 const emit = defineEmits<{
   'open-modal': [project: Project]
 }>()
-
-const img = useImage()
 </script>
 
 <template>
@@ -35,13 +33,15 @@ const img = useImage()
       />
     </div>
     <div class="flex h-56 justify-center overflow-hidden rounded-lg">
-      <NuxtImg
-        :placeholder="img(`${project.image}`)"
-        width="1536"
-        :alt="project.name + ' project image'"
-        class="h-full rounded-lg object-cover transition-all duration-300 group-hover:scale-105"
+      <img
         :src="project.image"
-      />
+        :alt="project.name + ' project image'"
+        width="1536"
+        height="864"
+        loading="lazy"
+        decoding="async"
+        class="h-full rounded-lg object-cover transition-all duration-300 group-hover:scale-105"
+      >
     </div>
     <NuxtLink
       :to="project.link"

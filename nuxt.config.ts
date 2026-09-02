@@ -2,7 +2,6 @@ export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
     '@nuxt/ui',
-    '@nuxt/image',
     'vue-sonner/nuxt',
   ],
 
@@ -16,7 +15,7 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: true,
+    enabled: false,
   },
 
   css: ['~/assets/style/main.css'],

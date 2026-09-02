@@ -1,10 +1,16 @@
 <script setup lang="ts">
 const isScrolling = ref(false)
 
+function handleScroll() {
+  isScrolling.value = window.scrollY > 0
+}
+
 onMounted(() => {
-  window.addEventListener('scroll', () => {
-    isScrolling.value = window.scrollY > 0
-  })
+  window.addEventListener('scroll', handleScroll, { passive: true })
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
 })
 
 function scrollToTop() {

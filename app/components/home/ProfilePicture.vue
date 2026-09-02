@@ -6,15 +6,17 @@ const { profile } = useAppConfig()
   <div class="z-10 flex items-center justify-center">
     <SpotlightButton rounded>
       <div
-        class="font-mona relative flex items-center justify-center gap-2 bg-gradient-to-b from-white/25 to-white bg-clip-text text-lg font-medium text-transparent transition-all duration-200"
+        class="relative flex items-center justify-center gap-2 bg-gradient-to-b from-white/25 to-white bg-clip-text text-lg font-medium text-transparent transition-all duration-200"
       >
-        <NuxtImg
-          width="96"
+        <img
           :src="profile.picture!"
-          class="size-24 rounded-full border-2 border-neutral-800/30 object-cover"
+          width="96"
+          height="96"
+          loading="lazy"
+          decoding="async"
           :alt="profile.name + ' Profile Picture'"
-          :aria-label="profile.name + ' Profile Picture'"
-        />
+          class="size-24 rounded-full border-2 border-neutral-800/30 object-cover"
+        >
       </div>
     </SpotlightButton>
   </div>
