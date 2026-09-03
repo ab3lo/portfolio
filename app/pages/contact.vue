@@ -96,10 +96,9 @@ async function onSubmit() {
     <Divider class="mb-8 mt-2" />
 
     <p class="text-center text-sm text-muted">
-      Email me directly at
-      <a :href="'mailto:' + profile.email" class="text-primary underline">
-        {{ profile.email }}
-      </a>
+      Email me directly
+      <a :href="'mailto:' + profile.email" class="text-primary underline"> here </a>
+      DM on any of the socials
     </p>
 
     <UForm

@@ -15,7 +15,7 @@ export default defineAppConfig({
     github: "https://github.com/ab3lo",
     element: "https://matrix.to/#/@ireallyhatejews:matrix.org",
     slack: "https://chat-with-abel.slack.com",
-    discord: "https://discord.com/users/ab3lo",
+    discord: "https://discord.com/users/develop_abel",
     upwork: "https://www.upwork.com/freelancers/abelm19",
   },
   seo: {
@@ -64,4 +64,4 @@ export default defineAppConfig({
       loading: "lucide:loader",
     },
   },
-  });
+});
