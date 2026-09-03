@@ -36,7 +36,7 @@ export const projects: Project[] = [
     image: "/projects/maison-hochard.webp",
     link: "",
     release: "2023",
-    description: "Online Latop vendor store,Built with Coolify and wordpress",
+    description: "Online Latop vendor store,Built with Woocommerce and Astra",
   },
   {
     name: "Mockline",

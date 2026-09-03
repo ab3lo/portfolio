@@ -22,6 +22,15 @@ export default defineNuxtConfig({
 
   app: {
     baseURL: '/portfolio/',
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/portfolio/favicon.ico' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/portfolio/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/portfolio/favicon-16x16.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/portfolio/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/portfolio/site.webmanifest' },
+      ],
+    },
   },
 
   nitro: {
