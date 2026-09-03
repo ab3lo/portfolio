@@ -98,7 +98,6 @@ async function onSubmit() {
     <p class="text-center text-sm text-muted">
       Email me directly
       <a :href="'mailto:' + profile.email" class="text-primary underline"> here </a>
-      DM on any of the socials
     </p>
 
     <UForm
