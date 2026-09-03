@@ -9,6 +9,7 @@ export default defineAppConfig({
     email: "1234@protonmail.com",
     phone: "(+33)90 1231000",
     picture: "https://avatars.githubusercontent.com/u/157012769?v=4",
+    ctaLink: "mailto:slothandmisery@tutamail.com",
   },
   socials: {
     github: "https://github.com/ab3lo",
