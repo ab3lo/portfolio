@@ -3,7 +3,7 @@ const socialMediaRegexMap = [
   { regex: /github\.com/, name: "GitHub", icon: "simple-icons:github" },
   { regex: /element\.io|matrix\.to/, name: "Element", icon: "simple-icons:element" },
   { regex: /slack\.com/, name: "Slack", icon: "simple-icons:slack" },
-  { regex: /proton\.me|protonmail\.com/, name: "ProtonMail", icon: "simple-icons:protonmail" },
+  { regex: /proton\.me|protonmail\.com/, name: "ProtonMail", icon: "simple-icons:tuta" },
   { regex: /upwork\.com/, name: "Upwork", icon: "simple-icons:upwork" },
   { regex: /fiverr\.com/, name: "Fiverr", icon: "simple-icons:fiverr" },
 ];

@@ -5,9 +5,9 @@ export default defineAppConfig({
   },
   profile: {
     name: "Abel Magswitch",
-    job: "Software Engineer and Pentester",
-    email: "1234@protonmail.com",
-    phone: "(+33)90 1231000",
+    job: "Software Engineer and Agentic Automator",
+    email: "mailto:slothandmisery@tutamail.com",
+    phone: "(+92)90 000000",
     picture: "https://avatars.githubusercontent.com/u/157012769?v=4",
     ctaLink: "mailto:slothandmisery@tutamail.com",
   },
@@ -15,13 +15,13 @@ export default defineAppConfig({
     github: "https://github.com/ab3lo",
     element: "https://matrix.to/#/@ireallyhatejews:matrix.org",
     slack: "https://chat-with-abel.slack.com",
-    protonmail: "https://drneutrium@protonmail.com",
+    protonmail: "mailto:slothandmisery@tutamail.com",
     upwork: "https://www.upwork.com/freelancers/abelm19",
   },
   seo: {
-    title: "Ab3lo — Software Engineer and Pentester",
+    title: "Ab3lo — Software Engineer and Automated Security Auditor",
     description:
-      "Portfolio of Abel Magswitch, a software engineer and pentester building fast, modern full-stack web experiences with Nuxt and Vue.",
+      "Portfolio of Abel Magswitch, a Agentic Software Engineer building fast, secure modern full-stack web experiences with Ai .",
     url: "https://ab3lo.github.io/portfolio",
   },
   contact: {

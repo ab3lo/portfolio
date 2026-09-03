@@ -1,8 +1,8 @@
 <script setup lang="ts">
 defineProps({
-  isText: {
-    type: Boolean,
-    default: false,
+  size: {
+    type: Number,
+    default: 8,
   },
 })
 </script>
@@ -13,15 +13,6 @@ defineProps({
     class="flex shrink-0 items-center"
     aria-label="Go back to home page"
   >
-    <UIcon
-      name="custom:maison-hochard"
-      class="size-8"
-    />
-    <span
-      v-if="isText"
-      class="ml-1 text-xs font-semibold"
-    >
-      Portfolio
-    </span>
+    <UIcon name="custom:ab3lo" :class="`size-${size}`" />
   </NuxtLink>
 </template>
