@@ -43,13 +43,17 @@ async function onSubmit() {
 
   loading.value = true;
   try {
-    const body = {
+    const body: Record<string, string> = {
       access_key: contact.web3formsAccessKey,
       name: state.fullname,
       email: state.email,
-      subject: state.subject,
+      from_name: profile.name,
       message: state.message,
     };
+
+    if (state.subject.trim()) {
+      body.subject = state.subject;
+    }
 
     const res = await fetch(contact.web3formsEndpoint, {
       method: "POST",
