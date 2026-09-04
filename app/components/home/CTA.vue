@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { profile } = useAppConfig();
+const { socials } = useAppConfig();
 </script>
 
 <template>
