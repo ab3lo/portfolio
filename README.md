@@ -1,6 +1,6 @@
 # Ab3lo Portfolio
 
-A personal portfolio site for **Abel Magswitch** — Software Engineer and Pentester.
+My personal portfolio site built in NUXT
 
 ## About
 
