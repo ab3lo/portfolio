@@ -9,12 +9,12 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: "Canvas",
-    image: "/projects/canvas.webp",
-    link: "https://canvas.hrcd.fr/",
-    release: "2024",
+    name: "Crochet and Co",
+    image: "/projects/crochet.webp",
+    link: "https://crochet-and-co.pages.dev/",
+    release: "2026",
     featured: true,
-    description: "Portfolio template built with Nuxt and Tailwind.",
+    description: "A custom Yarn store built with Astro ,Tailwindcss and Svelte with a locally managed admin panel/",
   },
   {
     name: "Helpr",
