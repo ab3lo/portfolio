@@ -17,48 +17,11 @@ export const projects: Project[] = [
     description: "A custom Yarn store built with Astro ,Tailwindcss and Svelte with a locally managed admin panel/",
   },
   {
-    name: "Helpr",
-    image: "/projects/helpr.webp",
-    link: "https://helpr.site/",
-    release: "2024",
-    featured: true,
-    description: "SaaS designed to help developpers ship their products.",
-  },
-  {
-    name: "HR Folio",
-    image: "/projects/hr-folio.webp",
-    link: "https://hr-folio.hrcd.fr/",
-    release: "2024",
-    description: "Personnal roadmap and resume.",
-  },
-  {
-    name: "Laptopvalley",
-    image: "/projects/maison-hochard.webp",
-    link: "",
-    release: "2023",
-    description: "Online Latop vendor store,Built with Woocommerce and Astra",
-  },
-  {
-    name: "Mockline",
-    image: "/projects/mockline.webp",
-    link: "https://mockline.dev/",
-    release: "2023",
-    description: "Design env written in Go to encrypt your backup.",
-  },
-  {
-    name: "NuxtLog",
-    image: "/projects/nuxtlog.webp",
-    link: "https://nuxtlog.com/",
-    release: "2023",
-    description: "Personal blogging platform and analytics.",
-  },
-  {
-    name: "Shelve",
-    image: "/projects/shelve.webp",
-    link: "https://shelve.cloud/",
-    release: "2022",
-    description: "The first open-source cloud storage manager.",
-  },
+    name: "Riggsware : Site Redesign",
+    image: "",
+    link: "https://riggsware.pages.dev",
+    release: "2025",
+    description: " Redesign of Riggsware : built with Nextjs,React,Tailwindcss and Spline",
 ];
 
 export interface StackItem {
